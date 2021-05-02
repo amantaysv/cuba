@@ -16,3 +16,12 @@ $(document).ready(function () {
     owl.trigger("prev.owl.carousel");
   });
 });
+
+let title = document.getElementById("header__title");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  title.style.marginTop = value * 0.25 + "px";
+});
+
+AOS.init();
