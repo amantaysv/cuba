@@ -2,9 +2,8 @@
 @import url(../libs/fontawesome/css/all.min.css);
 @import url(../fonts/georgia/stylesheet.css);
 @import url(../fonts/lato/stylesheet.css);
-@import url(../libs/OwlCarousel2-2.3.4/css/owl.carousel.min.css);
-@import url(../libs/OwlCarousel2-2.3.4/css/owl.theme.default.min.css);
 @import url(../libs/aos/css/aos.css);
+@import url(../libs/OwlCarousel2-2.3.4/css/owl.carousel.min.css);
 * {
   margin: 0;
   padding: 0;
@@ -79,21 +78,61 @@
 
 @-webkit-keyframes promoAnim {
   100% {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(30deg);
+            filter: hue-rotate(30deg);
   }
 }
 
 @keyframes promoAnim {
   100% {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(30deg);
+            filter: hue-rotate(30deg);
   }
+}
+
+@-webkit-keyframes anim {
+  0% {
+    background-position: 100% 50%;
+  }
+  25% {
+    background-position: 75% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    background-position: 100% 50%;
+  }
+  25% {
+    background-position: 75% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.header {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .header .promo {
   min-height: calc(100vh - 63px);
-  min-width: 100vw;
   position: relative;
 }
 
@@ -114,15 +153,11 @@
 
 .header .promo__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-linear-gradient(315deg, #14ffe1, #ffeb3f, #ff10e0);
-  background: -o-linear-gradient(315deg, #14ffe1, #ffeb3f, #ff10e0);
-  background: linear-gradient(135deg, #14ffe1, #ffeb3f, #ff10e0);
+  top: -8%;
+  left: -8%;
+  width: 115%;
+  height: 115%;
   background: url(../images/header/bg.webp) center center/cover no-repeat;
-  background-attachment: fixed;
   -webkit-filter: blur(5px);
           filter: blur(5px);
 }
@@ -171,18 +206,20 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1;
-  font-size: 300px;
-  line-height: 1.2;
+  line-height: 227px;
   text-align: center;
   font-family: georgia;
   text-transform: uppercase;
   font-weight: bold;
   font-style: normal;
-  background: url(../images/header/bg.webp) 0 0/200% 200%;
+  font-size: 200px;
+  background: -webkit-linear-gradient(45deg, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff) 0 0/300% 100%;
+  background: -o-linear-gradient(45deg, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff) 0 0/300% 100%;
+  background: linear-gradient(45deg, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff, #ECB84C, #fff) 0 0/300% 100%;
+  -webkit-animation: anim 5s linear infinite;
+          animation: anim 5s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: titleAnim 60s linear infinite;
-          animation: titleAnim 60s linear infinite;
 }
 
 .header__text {
@@ -204,11 +241,11 @@
   margin: 0;
 }
 
-.header .nav-item {
+.nav-item {
   position: relative;
 }
 
-.header .nav-item:hover::before {
+.nav-item:hover::before {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -221,7 +258,7 @@
   background: #ECB84C;
 }
 
-.header .nav-link {
+.nav-link {
   padding: 0;
   font-family: lato;
   font-size: 14px;
@@ -231,13 +268,19 @@
   font-weight: bold;
 }
 
-.header .nav-link:hover {
+.nav-link:hover {
   color: #4E5665;
 }
 
-.header .navbar {
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 20px;
+  z-index: 10;
 }
 
 .home {
@@ -596,6 +639,12 @@
   margin: 0 auto;
   margin-top: 48px;
   margin-bottom: 56px;
+}
+
+.carousel-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel .owl-carousel {
