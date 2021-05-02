@@ -1,0 +1,100 @@
+.about {
+   padding-top: 80px;
+
+   &__descr {
+      margin-top: 13px;
+      margin-bottom: 142px;
+   }
+
+   &__margin {
+      margin-top: 240px;
+   }
+
+   .wrapper {
+      padding: 33px 40px 18px;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      align-items: center;
+
+      &__title {
+         font-size: 24px;
+         text-align: left;
+         margin-bottom: 20px;
+      }
+
+      &-1 {
+         &::before {
+            content: '';
+            position: absolute;
+            top: 19px;
+            left: 19px;
+            width: 33px;
+            height: 33px;
+            border-top: 1px solid #ECB84C;
+            border-left: 1px solid #ECB84C;
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            bottom: 19px;
+            right: 19px;
+            width: 33px;
+            height: 33px;
+            border-bottom: 1px solid #ECB84C;
+            border-right: 1px solid #ECB84C;
+         }
+      }
+
+      &-2 {
+         &::before {
+            content: '';
+            position: absolute;
+            top: 19px;
+            right: 19px;
+            width: 33px;
+            height: 33px;
+            border-top: 1px solid #ECB84C;
+            border-right: 1px solid #ECB84C;
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            bottom: 19px;
+            left: 19px;
+            width: 33px;
+            height: 33px;
+            border-bottom: 1px solid #ECB84C;
+            border-left: 1px solid #ECB84C;
+         }
+      }
+
+      &-img {
+         position: relative;
+         width: 100%;
+         height: 100%;
+
+         &__right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            object-fit: cover;
+         }
+
+         &__left {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            object-fit: cover;
+         }
+      }
+   }
+
+   &__line {
+      margin-top: 160px;
+   }
+}

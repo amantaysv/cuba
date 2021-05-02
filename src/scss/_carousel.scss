@@ -1,0 +1,54 @@
+.carousel {
+   padding-top: 80px;
+
+   &__descr {
+      margin-top: 42px;
+   }
+
+   &__line{
+      margin-top: 80px;
+      &-short {
+         width: 270px;
+         margin: 0 auto;
+         margin-top: 48px;
+         margin-bottom: 56px;
+      }
+   }
+
+
+   .owl-carousel {
+      max-width: 640px;
+      margin: 0 auto;
+
+      .owl-nav {
+         .owl-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 40px;
+            height: 40px;
+            background: #ECB84C;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+            &:hover {
+               background: #ECB84C;
+            }
+         }
+
+         .owl-prev {
+            left: 0;
+            transform: translate(-50%, -50%);
+         }
+
+         .owl-next {
+            right: 0;
+            transform: translate(50%, -50%);
+         }
+      }
+   }
+
+}

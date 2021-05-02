@@ -1,0 +1,93 @@
+.cadillac {
+   padding-top: 80px;
+
+   &-block {
+      margin-top: 111px;
+      margin-bottom: 60px;
+      position: relative;
+   }
+
+   &__dot-1 {
+      @include dot(117, 148);
+   }
+
+   &__dot-2 {
+      @include dot(117, 463)
+   }
+
+   &__dot-3 {
+      @include dot(74, 766)
+   }
+
+   &__dot-4 {
+      @include dot(276, 839)
+   }
+
+   &__lines {
+      &::before {
+         content: '';
+         position: absolute;
+         top: -61px;
+         left: 899px;
+         width: 141px;
+         height: 1px;
+         background: #ECB84C;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 752px;
+         width: 172px;
+         height: 1px;
+         background: #ECB84C;
+         transform: rotate(-45deg);
+      }
+   }
+
+   &__shadows {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      border-radius: 50%;
+      height: 7px;
+      background: #212020;
+      opacity: 50%;
+      filter: blur(5.43656px);
+
+      &::before {
+         content: '';
+         position: absolute;
+         bottom: -4px;
+         left: 105px;
+         width: 154px;
+         height: 8px;
+         background: #000000;
+         opacity: 0.3;
+         border-radius: 50%;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -3px;
+         right: 211px;
+         width: 154px;
+         height: 8px;
+         background: #000000;
+         opacity: 0.3;
+         border-radius: 50%;
+      }
+   }
+
+   &__text {
+      position: absolute;
+      top: -85px;
+      left: 905px;
+   }
+   &__line {
+      margin-top: 80px;
+   }
+}
