@@ -11,6 +11,10 @@
    box-sizing: border-box;
 }
 
+main {
+   overflow: hidden;
+}
+
 @import "../scss/adaptive-value";
 @import "../scss/variables";
 @import "../scss/header";
@@ -20,3 +24,4 @@
 @import "../scss/carousel";
 @import "../scss/map";
 @import "../scss/footer";
+@import "../scss/aos-mobile";
