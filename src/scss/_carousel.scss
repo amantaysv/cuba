@@ -36,9 +36,12 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-
+            
             &:hover {
                background: #ECB84C;
+            }
+            i{
+               color: #fff;
             }
          }
 

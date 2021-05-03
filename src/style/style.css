@@ -678,6 +678,10 @@
   background: #ECB84C;
 }
 
+.carousel .owl-carousel .owl-nav .owl-arrow i {
+  color: #fff;
+}
+
 .carousel .owl-carousel .owl-nav .owl-prev {
   left: 0;
   -webkit-transform: translate(-50%, -50%);
